@@ -1,7 +1,7 @@
 class SkeletonsController < ApplicationController
 
   def index
-    @skeletons = Skeleton.all.includes(:user)
+    @skeletons = Skeleton.all.includes(:user).first(20)
   end
 
   def create
